@@ -1,0 +1,10 @@
+button.btn-newpoll-position {
+    position: fixed;
+    bottom: 15px;
+    right: 80px;
+}
+
+.iconnewpoll{
+    position: relative;
+    bottom: 2px;
+}

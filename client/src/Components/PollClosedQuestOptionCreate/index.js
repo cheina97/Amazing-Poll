@@ -1,0 +1,2 @@
+import PollClosedQuestOptionCreate from './PollClosedQuestOptionCreate'
+export default PollClosedQuestOptionCreate

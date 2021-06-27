@@ -1,0 +1,85 @@
+GET http://localhost:3001/api/polls HTTP/1.1
+
+###
+
+GET http://localhost:3001/api/polls/73/questions HTTP/1.1
+
+###
+
+GET http://localhost:3001/api/polls/73/answers HTTP/1.1
+
+###
+
+POST http://localhost:3001/api/polls/ HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Questionario nuovo",
+  "questions": [
+    {
+      "name": "Domanda 1",
+      "closed": false,
+      "min": 0,
+      "max": 1,
+      "position": 1,
+      "options": []
+    },
+    {
+      "name": "Domanda 2",
+      "closed": true,
+      "min": 1,
+      "max": 2,
+      "position": 2,
+      "options": ["Valore 1","Valore 2"]
+    }
+  ]
+}
+
+###
+
+POST http://localhost:3001/api/answers/ HTTP/1.1
+content-type: application/json
+
+{
+    "id_submission": 256,
+    "questions": [
+        {
+            "id_quest": 279,
+            "values": []
+
+        },
+        { 
+            "id_quest": 280,
+            "values": ["Valore 1","Valore 2"]
+        },
+        { 
+            "id_quest": 281,
+            "values": ["Valore 1"]
+        }
+    ]
+}
+
+###
+
+POST http://localhost:3001/api/submissions/ HTTP/1.1
+content-type: application/json
+
+{
+    "id_poll": 74,
+    "name_user":"Silvia"
+}
+
+###
+
+POST http://localhost:3001/api/sessions HTTP/1.1
+content-type: application/json
+
+{
+    "username": "admin1@poll.it",
+    "password": "Qwerty1234"
+}
+
+###
+
+DELETE http://localhost:3001/api/sessions/current HTTP/1.1
+

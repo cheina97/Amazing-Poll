@@ -1,0 +1,12 @@
+.loading {
+  background: rgba(128, 128, 128, 0.589);
+  color: black;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  float: left;
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+button.btn-refresh-position {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+}
+
+.iconrefresh{
+    position: relative;
+    bottom: 2px;
+}
